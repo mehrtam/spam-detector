@@ -1,0 +1,29 @@
+[project]
+name = "spam-detection"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Mehrta Eslami",email = "99945776+mehrtam@users.noreply.github.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi (>=0.135.2,<0.136.0)",
+    "uvicorn (>=0.42.0,<0.43.0)",
+    "scikit-learn (>=1.8.0,<2.0.0)",
+    "pytest (>=9.0.2,<10.0.0)",
+    "pydantic (>=2.12.5,<3.0.0)"
+]
+
+[tool.poetry]
+packages = [{include = "spam_detection", from = "src"}]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[dependency-groups]
+dev = [
+    "pytest (>=9.0.2,<10.0.0)",
+    "httpx (>=0.28.1,<0.29.0)"
+]
